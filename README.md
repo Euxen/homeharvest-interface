@@ -55,6 +55,7 @@ Once the application is running, open your web browser and navigate to [http://1
 
 ## Folder Structure
 
+```bash
 scrap-and-save/
 ├── app.py
 ├── templates/
@@ -64,7 +65,7 @@ scrap-and-save/
 ├── homeharvest.py
 ├── requirements.txt
 └── README.md
-
+```
 
 ## License
 
