@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %} Home Page {% endblock %}
+{% block content %}
+<h1>Search Result</h1>
+<p>Location: {{ location }}</p>
+<p>Days: {{ days }}</p>
+<p>Listing Type: {{ listingType }}</p>
+
+<!-- Example usage of the properties variable -->
+<h2>Properties</h2>
+<table border="1">
+    <thead>
+        <tr>
+            {% for column in properties.columns %}
+                <th>{{ column }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for index, row in properties.iterrows() %}
+            <tr>
+                {% for value in row %}
+                    <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

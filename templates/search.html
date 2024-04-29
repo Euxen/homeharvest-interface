@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %} Search for scraping {% endblock %}
+
+{% block content %}
+<form action="/search" method="post">
+
+    <p>Location:</p>
+    <p><input type="text" name="location"></p>
+
+    <p>Past Days:</p>
+    <p><input type="text" name="days"></p>
+
+    <select class="form-control" name="listingType">
+        {% for listingType in listingTypeList %}
+            <option value="{{ listingType }}">{{ listingType }}</option>
+        {% endfor %}
+    </select>
+
+    <p><input type="submit" value="Submit"></p>
+    
+</form>
+{% endblock%}
